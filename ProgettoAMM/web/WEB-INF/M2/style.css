@@ -9,6 +9,7 @@ body{
     margin-top: 0px;
 }
 
+/*Colore titoli e font*/
 h1{
     margin-top: 0px;
     color: #1f3057;
@@ -64,46 +65,158 @@ h3{
     font-weight: bold;
 }
 
-label,input,textArea{
+label,input:focus,textArea:focus{
     color: blue;
     font-family: "Open Sans", Arial, sans-serif;
 }
 
-/**
-Stile liste
-*/
-
-/* Barre del social e dei link*/
-
-.blockbar{
-
-    background: #84078A;
-    top: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    height: 50px;
+/* Barra alta profilo*/
+#navbar{
+    border-bottom: 5px ridge lightblue;
+    border-top: 2px solid lightblue;
+    text-align: left;
+    padding: 5px;
 }
 
-#imglog{
-    width: 20px;
-    height: 20px;
-    
+#dati{
+    color:red;
+    padding: 20px;
+    padding-bottom: 30px;
+    zoom: 150%;
 }
 
-#logout{
-    margin-top: 0px;
-    text-align: right;
-    position: absolute;
-    top: 0px;
-    right: 55px;
-}
-#log_out{
-    color: white;
-}
-#log_out a{
-    color: white;
-    font-size: 12px;
-    margin-left: 0px;
-      
+#dati input{
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
+/*login*/
+button{
+    float: left;
+    width:200px;
+    height:25px;
+    font-size:20px;
+    -webkit-border-radius:15px;
+}
+button:hover {
+    box-shadow: 2px 2px 5px red;}
+button:active{
+    box-shadow:none;
+}
+ 
+.post{
+    border: 2px black solid;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+ 
+.nome{
+    position: relative;
+    left: 120px;
+}
+ 
+.profile_img{
+    position: relative;
+    top: -50px;
+    width: 75px;
+    height: 100px;
+}
+ 
+#sidebar{
+    border: 1px black solid;
+    border-collapse:collapse;
+    width: 15%;
+    float: left;
+    position:fixed;
+    margin-bottom: 0px;
+    color:black;
+}
+ 
+.post_img{
+    display: block;
+    position: relative;
+    left: 25%;
+    top:10px;
+}
+ 
+@media only screen and (min-width: 1280px){
+    #content{
+        border: 1px black solid;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 15px;
+        margin: 0px;
+        border-collapse:collapse;
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    #login_form{
+        background-color: white;
+        color:red;
+        padding: 20px;
+        padding-bottom: 30px;
+        border: 5px groove red;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -70px;
+        margin-left: -160px;
+    }
+}
+ 
+@media only screen and (min-width: 480px) and (max-width: 1280px){
+    #content{
+        border: 1px black solid;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 15px;
+        margin: 0px;
+        border-collapse:collapse;
+        margin-left: 15%;
+    }
+    #login_form{
+        background-color: white;
+        color:red;
+        padding: 20px;
+        padding-bottom: 30px;
+        border: 5px groove red;
+        position: absolute;
+        left: 50%;
+        margin-left: -160px;
+        zoom: 75%;
+    }
+}
+ 
+@media only screen and (max-width: 480px){
+    #content{
+        border: 1px black solid;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 15px;
+        margin: 0px;
+        border-collapse:collapse;
+        margin-left: 15%;
+    }
+    #login_form{
+        background-color: white;
+        color:red;
+        padding: 10px;
+        padding-bottom: 15px;
+        border: 5px groove red;
+        position: static;
+        margin-top: 35px;
+        zoom: 50%;
+    }
+    body{
+        zoom: 50%;
+        font-size: 100%;
+    }
+    img{
+        zoom: 50%;
+    }
+}
